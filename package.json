@@ -1,0 +1,23 @@
+{
+  "name": "ninja-timer",
+  "version": "0.0.1",
+  "description": "NinjaBlocks Timer Driver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/carlossg/ninja-timer.git"
+  },
+  "keywords": [
+    "heatmiser"
+  ],
+  "author": "Carlos Sanchez",
+  "license": "ASL",
+  "readmeFilename": "README.md",
+  "dependencies": {
+  },
+  "engines": {
+  }
+}
