@@ -27,7 +27,10 @@ function Driver(opts,app) {
   this.opts = opts;
 
   // map with timer_name: timer_object
-  this.timers = _.object(_.map(opts.timers||{}, function(data, key){ return [key, new Timer(data, self.log)]; }));
+  this.timers = _.object(_.map(opts.timers||{}, function(data, key){
+    data.name = key;
+    return [key, new Timer(data, self.log)];
+  }));
   opts.timers = this.timers;
 
   app.once('client::up',function(){
