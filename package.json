@@ -17,6 +17,7 @@
   "license": "ASL",
   "readmeFilename": "README.md",
   "dependencies": {
+    "underscore": ">=1.6.0"
   },
   "engines": {
   }

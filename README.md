@@ -39,8 +39,14 @@ and can be easily edited
     {
       "config": {
         "timers": {
-          "mytimer1": {},
-          "mytimer2": {},
+          "mytimer1": {
+            "name": "mytimer1",
+            "start": 1392487449552
+          },
+          "mytimer2": {
+            "name": "mytimer2",
+            "start": 1392487449554
+          },
         }
       }
     }
