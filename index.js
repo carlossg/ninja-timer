@@ -32,6 +32,7 @@ function Driver(opts,app) {
     return [key, new Timer(data, self.log)];
   }));
   opts.timers = this.timers;
+  self.save();
 
   app.once('client::up',function(){
     _.each(self.timers, function(timer, name){
