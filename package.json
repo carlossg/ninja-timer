@@ -11,7 +11,8 @@
     "url": "git://github.com/carlossg/ninja-timer.git"
   },
   "keywords": [
-    "heatmiser"
+    "timer",
+    "time"
   ],
   "author": "Carlos Sanchez",
   "license": "ASL",
