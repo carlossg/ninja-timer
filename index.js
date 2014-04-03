@@ -29,7 +29,11 @@ function Driver(opts,app) {
   // map with timer_name: timer_object
   this.timers = _.object(_.map(opts.timers||{}, function(data, key){
     data.name = key;
-    return [key, new Timer(data, self.log)];
+    return [key, new Timer(data, self.log, function(timer) {
+      // save the timer back to config file
+      self.opts.timers[key] = timer;
+      self.save();
+    })];
   }));
   opts.timers = this.timers;
   self.save();
@@ -63,7 +67,7 @@ Driver.prototype.removeTimer = function(name) {
 }
 
 Driver.prototype.registerTimer = function(timer) {
-  this.log.info("Registering timer '%s'", timer.name);
+  this.log.info("Registering timer '%s' started at %s", timer.name, new Date(timer.start));
   this.emit('register', timer);
   // send the data asap
   process.nextTick(function() {
